@@ -44,10 +44,10 @@ void Swerve_Init()
     // define constants for each module in an array [0] == fl, [1] == rl, [2] == rr, [3] == fr
     int azimuth_can_bus_array[NUMBER_OF_MODULES] = {2, 2, 2, 2};
     int azimuth_speed_controller_id_array[NUMBER_OF_MODULES] = {1, 2, 3, 4};
-    int azimuth_offset_array[NUMBER_OF_MODULES] = {2050, 1940, 1430, 8150};
+    int azimuth_offset_array[NUMBER_OF_MODULES] = {6800, 650, 4900, 1310};
     Motor_Reversal_t azimuth_motor_reversal_array[NUMBER_OF_MODULES] = {MOTOR_REVERSAL_REVERSED, MOTOR_REVERSAL_REVERSED, MOTOR_REVERSAL_REVERSED, MOTOR_REVERSAL_REVERSED};
 
-    int drive_can_bus_array[NUMBER_OF_MODULES] = {1, 2, 2, 2};
+    int drive_can_bus_array[NUMBER_OF_MODULES] = {2, 2, 2, 1};
     int drive_speed_controller_id_array[NUMBER_OF_MODULES] = {1, 2, 3, 4};
     Motor_Reversal_t drive_motor_reversal_array[NUMBER_OF_MODULES] = {MOTOR_REVERSAL_NORMAL, MOTOR_REVERSAL_NORMAL, MOTOR_REVERSAL_REVERSED, MOTOR_REVERSAL_REVERSED};
 
@@ -55,9 +55,9 @@ void Swerve_Init()
     Motor_Config_t azimuth_motor_config = {
         .control_mode = POSITION_CONTROL,
         .angle_pid = {
-            .kp = 15000.0f,
-            .kd = 8000.0f,
-            .kf = 5000.0f,
+            .kp = 18000.0f,
+            .kd = 10000.0f,
+            .kf = 7000.0f,
             .output_limit = GM6020_MAX_CURRENT,
         }};
 
